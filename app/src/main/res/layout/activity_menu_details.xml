@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E4EC"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+       android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chinese"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:id="@+id/tv_menu_category"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35 items"
+            android:layout_below="@+id/tv_menu_category"
+            android:layout_centerHorizontal="true"
+            android:textSize="10sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/iv_menu"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/cart"
+                android:id="@+id/iv_cart"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:background="@drawable/cart_count_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:layout_toRightOf="@+id/iv_cart"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-2dp"/>
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/menu"
+            android:id="@+id/iv_menu"
+            android:layout_marginTop="18dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_down"
+            android:text="Popular"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:src="@drawable/horizontal_sort" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/list_item_menu" />
+
+            <include layout="@layout/list_item_2" />
+
+            <include layout="@layout/list_item_menu" />
+
+            <include layout="@layout/list_item_2" />
+
+            <include layout="@layout/list_item_menu" />
+
+            <include layout="@layout/list_item_2" />
+
+            <include layout="@layout/list_item_menu" />
+
+            <include layout="@layout/list_item_2" />
+
+            <include layout="@layout/list_item_menu" />
+
+            <include layout="@layout/list_item_2" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
